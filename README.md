@@ -7,13 +7,15 @@ A simple TypeScript learning project demonstrating basic TypeScript syntax and f
 ```
 ├── src/
 │   ├── index.ts          # Main entry point with greet function
+│   ├── hello.ts          # Additional TypeScript file with greet function
+├── dist/                 # Compiled JavaScript and declaration files (generated)
 │   ├── index.js          # Compiled JavaScript
-│   └── index.d.ts        # TypeScript declaration file
-├── hello.ts              # Additional TypeScript file with greet function
-├── hello.js              # Compiled JavaScript
-├── hello.d.ts            # TypeScript declaration file
+│   ├── index.d.ts        # TypeScript declaration file
+│   ├── hello.js          # Compiled JavaScript
+│   ├── hello.d.ts        # TypeScript declaration file
 ├── package.json          # Project dependencies and metadata
 ├── tsconfig.json         # TypeScript compiler configuration
+├── .gitignore            # Git ignore rules
 └── README.md             # This file
 ```
 
@@ -50,10 +52,10 @@ This will compile all `.ts` files to `.js` files according to the settings in `t
 
 ```bash
 # Run the main file
-node src/index.js
+node dist/index.js
 
 # Run the hello file
-node hello.js
+node dist/hello.js
 ```
 
 ## Features
@@ -71,7 +73,7 @@ function greet(name: string): string {
 }
 ```
 
-### hello.ts
+### src/hello.ts
 ```typescript
 function greet(person: string): string {
     return `Hello, ${person}, Lets learn TypeScript!`;
